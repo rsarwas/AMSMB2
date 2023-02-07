@@ -166,7 +166,7 @@ extension SMB2Context {
     var isConnected: Bool {
         do {
             return try withThreadSafeContext { (context) -> Bool in
-                context.pointee.is_connected != 0
+                context.pointee.connecting_fds_count != 0
             }
         } catch {
             return false
