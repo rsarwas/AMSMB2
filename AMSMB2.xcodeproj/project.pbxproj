@@ -323,9 +323,9 @@
 				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
-				"VALID_ARCHS[sdk=*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=appletvos*]" = "arm64 armv7 armv7s";
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64 armv7 armv7s";
+				"VALID_ARCHS[sdk=appletvos*]" = "x86_64 arm64 arm64e";
+				"VALID_ARCHS[sdk=iphoneos*]" = "i386 armv7 armv7s x86_64 arm64 arm64e";
+				"VALID_ARCHS[sdk=macosx*]" = "x86_64 arm64e arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -385,9 +385,9 @@
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
-				"VALID_ARCHS[sdk=*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=appletvos*]" = "arm64 armv7 armv7s";
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64 armv7 armv7s";
+				"VALID_ARCHS[sdk=appletvos*]" = "x86_64 arm64 arm64e";
+				"VALID_ARCHS[sdk=iphoneos*]" = "i386 armv7 armv7s x86_64 arm64 arm64e";
+				"VALID_ARCHS[sdk=macosx*]" = "x86_64 arm64e arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
