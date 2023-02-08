@@ -40,7 +40,7 @@ else
     armv7 | armv7k | armv7s )
       export CHOST=arm-apple-darwin*
       ;;
-    arm64 )
+    arm64 | arm64e )
       export CHOST=aarch64-apple-darwin*
       ;;
     i386 | x86_64 )
@@ -62,7 +62,7 @@ else
       ;;
     tvos )
       case $ARCH in
-        i386 | x86_64 )
+        i386 | x86_64 | arm64e )
           export SDK=appletvsimulator
           ;;
         * )
@@ -72,7 +72,7 @@ else
        ;;
     watchos )
       case $ARCH in
-        i386 | x86_64 )
+        x86_64 | arm64e )
           export SDK=watchsimulator
           ;;
         * )
@@ -82,7 +82,7 @@ else
        ;;
     ios )
       case $ARCH in
-        i386 | x86_64 )
+        x86_64 | arm64e )
           export SDK=iphonesimulator
           ;;
         * )
@@ -92,7 +92,7 @@ else
       ;;
     * )
       case $ARCH in
-        i386 | x86_64 )
+        x86_64 | arm64e )
           export SDK=iphonesimulator
           ;;
         * )

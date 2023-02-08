@@ -17,16 +17,16 @@ PACKAGE_DIRECTORY=`pwd`
 export LIB_OUTPUT="${PACKAGE_DIRECTORY}/libsmb2/lib"
 cd buildtools
 
-brew update
-for pkg in cmake automake autoconf libtool; do
-    if brew list -1 | grep -q "^${pkg}\$"; then
-        echo "Updating ${pkg}."
-        brew upgrade $pkg &> /dev/null
-    else
-        echo "Installing ${pkg}."
-        brew install $pkg > /dev/null
-    fi
-done
+# brew update
+# for pkg in cmake automake autoconf libtool; do
+#     if brew list -1 | grep -q "^${pkg}\$"; then
+#         echo "Updating ${pkg}."
+#         brew upgrade $pkg &> /dev/null
+#     else
+#         echo "Installing ${pkg}."
+#         brew install $pkg > /dev/null
+#     fi
+# done
 
 if [ ! -d libsmb2 ]; then
     git clone https://github.com/sahlberg/libsmb2
@@ -53,15 +53,15 @@ fi
 
 echo "  Build iOS"
 export OS=ios
-export MINSDKVERSION=9.0
+export MINSDKVERSION=11.0
 ../autoframework libsmb2 $FRPARAM > /dev/null
 echo "  Build macOS"
 export OS=macos
-export MINSDKVERSION=10.11
+export MINSDKVERSION=10.13
 ../autoframework libsmb2 $FRPARAM > /dev/null
 echo "  Build tvOS"
 export OS=tvos
-export MINSDKVERSION=9.0
+export MINSDKVERSION=11.0
 ../autoframework libsmb2 $FRPARAM > /dev/null
 cd ..
 
@@ -69,6 +69,6 @@ echo  "Copying additional headers"
 cp    "libsmb2/include/libsmb2-private.h" "${PACKAGE_DIRECTORY}/libsmb2/include/"
 cp    "module.modulemap"                  "${PACKAGE_DIRECTORY}/libsmb2/include/"
 
-rm -rf libsmb2
-rm -rf include
-rm -rf lib
+# rm -rf libsmb2
+# rm -rf include
+# rm -rf lib
