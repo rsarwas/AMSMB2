@@ -19,9 +19,7 @@
 #ifndef _LIBSMB2_H_
 #define _LIBSMB2_H_
 
-//#ifndef UINT64_MAX
 #include <stdint.h>
-//#endif
 
 #ifdef __cplusplus
 extern "C" {
